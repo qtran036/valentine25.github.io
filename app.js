@@ -9,17 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add Chiikawa sticker GIF - using direct media URL
+    // Add Chiikawa GIF - using a known working GIF
     const gift = document.createElement('img');
-    gift.src = 'https://media.tenor.com/bS1mnGIfLWMAAAAC/chikawa-sticker.gif';  // Changed URL format
+    gift.src = 'https://media.tenor.com/bKAY9zJqlYwAAAAi/chiikawa-heart.gif';  // New working GIF
     gift.alt = 'Chiikawa with heart';
     gift.className = 'gift';
-    // Add error handling to check if GIF loads
-    gift.onerror = () => {
-        console.log('GIF failed to load');
-        // Try alternative URL if first one fails
-        gift.src = 'https://media.tenor.com/bS1mnGIfLWMAAAAi/chikawa-sticker.gif';
-    };
     initialState.appendChild(gift);
 
     // Rest of your code remains the same

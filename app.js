@@ -9,14 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add crying Chiikawa GIF - trying a different URL
+    // Add Chiikawa sticker GIF
     const gift = document.createElement('img');
-    gift.src = 'https://media.tenor.com/i0qwDkAfYQ4AAAAi/chiikawa-cry.gif';  // New URL
-    gift.alt = 'Chiikawa';
+    gift.src = 'https://media.tenor.com/bS1mnGIfLWMAAAAi/chikawa-sticker.gif';  // New Chiikawa sticker
+    gift.alt = 'Chiikawa with heart';
     gift.className = 'gift';
     initialState.appendChild(gift);
 
-    // Rest of your existing code...
+    // Rest of your code remains the same
     const message = document.createElement('h1');
     message.className = 'message';
     message.textContent = 'Will you be my Valentine?';
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const noButton = document.createElement('button');
     noButton.className = 'button no-button';
     noButton.textContent = 'No';
-    noButton.onmouseover = moveButton;  // Changed from onclick to onmouseover
+    noButton.onmouseover = moveButton;
     buttonContainer.appendChild(noButton);
 
     const successState = document.createElement('div');
@@ -59,10 +59,7 @@ function moveButton() {
     const button = document.querySelector('.no-button');
     const container = document.querySelector('.container');
     
-    // Get container boundaries
     const containerRect = container.getBoundingClientRect();
-    
-    // Calculate random position within container
     const maxX = containerRect.width - button.offsetWidth;
     const maxY = containerRect.height - button.offsetHeight;
     

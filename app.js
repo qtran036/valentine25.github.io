@@ -4,49 +4,59 @@ document.addEventListener('DOMContentLoaded', () => {
     container.className = 'container';
     document.body.appendChild(container);
 
-    // Add gift image
+    // Initial state container
+    const initialState = document.createElement('div');
+    initialState.id = 'initial-state';
+    container.appendChild(initialState);
+
+    // Add crying Chiikawa GIF
     const gift = document.createElement('img');
-    gift.src =  'https://tenor.com/bZQ5S.gif;'// Gift box icon
+    gift.src = 'https://media.tenor.com/d8moG4QDZ8tAAAAi/chiikawa-crying.gif';
     gift.className = 'gift';
-    container.appendChild(gift);
+    initialState.appendChild(gift);
 
     // Add message
     const message = document.createElement('h1');
-    message.textContent = 'Will you be my Valentine?';
     message.className = 'message';
-    container.appendChild(message);
+    message.textContent = 'Will you be my Valentine?';
+    initialState.appendChild(message);
 
-    // Create button container
+    // Add button container
     const buttonContainer = document.createElement('div');
     buttonContainer.className = 'button-container';
-    container.appendChild(buttonContainer);
+    initialState.appendChild(buttonContainer);
 
     // Add Yes button
     const yesButton = document.createElement('button');
-    yesButton.textContent = 'Yes';
     yesButton.className = 'button yes-button';
+    yesButton.textContent = 'Yes';
+    yesButton.onclick = handleYes;
     buttonContainer.appendChild(yesButton);
 
     // Add No button
     const noButton = document.createElement('button');
-    noButton.textContent = 'No';
     noButton.className = 'button no-button';
+    noButton.textContent = 'No';
+    noButton.onclick = moveButton;
     buttonContainer.appendChild(noButton);
 
-    // Add event listeners
-    yesButton.addEventListener('click', () => {
-        message.textContent = 'You are stuck with me! Happy Valentine\'s Day! ❤️';
-        buttonContainer.style.display = 'none';
-        gift.classList.add('https://tenor.com/v6mdDAbN7Ob.gif');
-    });
+    // Create success state (hidden initially)
+    const successState = document.createElement('div');
+    successState.id = 'success-state';
+    successState.style.display = 'none';
+    container.appendChild(successState);
 
-    noButton.addEventListener('mouseover', () => {
-        const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
-        const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
-        noButton.style.position = 'absolute';
-        noButton.style.left = `${x}px`;
-        noButton.style.top = `${y}px`;
-    });
+    // Add happy bear GIF
+    const successGift = document.createElement('img');
+    successGift.src = 'https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif';
+    successGift.className = 'gift';
+    successState.appendChild(successGift);
+
+    // Add success message
+    const successMessage = document.createElement('h1');
+    successMessage.className = 'message';
+    successMessage.textContent = 'You are stuck with me! Happy Valentine\'s Day! ❤️';
+    successState.appendChild(successMessage);
 });
 
 function moveButton() {
@@ -59,4 +69,4 @@ function moveButton() {
 function handleYes() {
     document.getElementById('initial-state').style.display = 'none';
     document.getElementById('success-state').style.display = 'block';
-} 
+}

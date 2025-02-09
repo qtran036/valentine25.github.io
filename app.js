@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add cute bear GIF that we know works
+    // Add Shakespaw cat GIF
     const gift = document.createElement('img');
-    gift.src = 'https://media.tenor.com/N2oqtqaB_G4AAAAi/peach-goma.gif';  // Using a known working GIF
-    gift.alt = 'Cute Bear Love';
+    gift.src = 'https://media.tenor.com/hGawMBuSNlGAAAAi/shakespaw.gif';  // New Shakespaw GIF
+    gift.alt = 'Shakespaw Cat with Heart';
     gift.className = 'gift';
     initialState.appendChild(gift);
 

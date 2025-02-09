@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     // Create main container
     const container = document.createElement('div');
@@ -48,4 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
         noButton.style.left = `${x}px`;
         noButton.style.top = `${y}px`;
     });
-}); 
+});
+
+function moveButton() {
+    const button = document.querySelector('.no-button');
+    button.style.position = 'absolute';
+    button.style.left = `${Math.random() * 80}%`;
+    button.style.top = `${Math.random() * 80}%`;
+}
+
+function handleYes() {
+    document.getElementById('initial-state').style.display = 'none';
+    document.getElementById('success-state').style.display = 'block';
+} 

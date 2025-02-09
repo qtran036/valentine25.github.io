@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add Bubu Dudu GIF with new URL
+    // Add cute bear GIF that we know works
     const gift = document.createElement('img');
-    gift.src = 'https://media.tenor.com/kcob1QHqLVTAAAAi/dudu-bubu.gif';  // New URL format
-    gift.alt = 'Bubu Dudu Bears';
+    gift.src = 'https://media.tenor.com/N2oqtqaB_G4AAAAi/peach-goma.gif';  // Using a known working GIF
+    gift.alt = 'Cute Bear Love';
     gift.className = 'gift';
     initialState.appendChild(gift);
 

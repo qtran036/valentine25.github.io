@@ -9,11 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add Bubu Dudu GIF
+    // Add Bubu Dudu GIF - using different URL format
     const gift = document.createElement('img');
-    gift.src = 'https://media.tenor.com/gCzh1hfMgcaAAAAi/bubu-bubu-dudu.gif';  // New Bubu Dudu GIF
+    gift.src = 'https://media.tenor.com/gCzh1hfMgcaAAAAC/bubu-bubu-dudu.gif';  // Changed URL format
     gift.alt = 'Bubu Dudu Bear';
     gift.className = 'gift';
+    // Add error handling
+    gift.onerror = () => {
+        // If first URL fails, try alternative format
+        gift.src = 'https://media.tenor.com/gCzh1hfMgcaAAAAD/bubu-bubu-dudu.gif';
+    };
     initialState.appendChild(gift);
 
     // Rest of your code remains the same

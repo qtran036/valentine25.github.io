@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add Chiikawa GIF - using a known working GIF
+    // Add Bubu Dudu GIF
     const gift = document.createElement('img');
-    gift.src = 'https://media.tenor.com/bKAY9zJqlYwAAAAi/chiikawa-heart.gif';  // New working GIF
-    gift.alt = 'Chiikawa with heart';
+    gift.src = 'https://media.tenor.com/gCzh1hfMgcaAAAAi/bubu-bubu-dudu.gif';  // New Bubu Dudu GIF
+    gift.alt = 'Bubu Dudu Bear';
     gift.className = 'gift';
     initialState.appendChild(gift);
 

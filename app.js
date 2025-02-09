@@ -9,9 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add crying Chiikawa GIF
+    // Add crying Chiikawa GIF - using direct media URL
     const gift = document.createElement('img');
     gift.src = 'https://media.tenor.com/d8moG4QDZ8tAAAAi/chiikawa-crying.gif';
+    gift.alt = 'Chiikawa';  // Add alt text
     gift.className = 'gift';
     initialState.appendChild(gift);
 
@@ -46,9 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
     successState.style.display = 'none';
     container.appendChild(successState);
 
-    // Add happy bear GIF
+    // Add happy bear GIF - using direct media URL
     const successGift = document.createElement('img');
     successGift.src = 'https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif';
+    successGift.alt = 'Happy Bear';  // Add alt text
     successGift.className = 'gift';
     successState.appendChild(successGift);
 

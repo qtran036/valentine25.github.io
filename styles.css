@@ -1,24 +1,35 @@
 body {
+    margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #ffebee;
+    background-color: #ffe6e6;
     font-family: Arial, sans-serif;
 }
 
 .container {
     text-align: center;
+    padding: 20px;
 }
 
 .gift {
     width: 200px;
+    height: auto;
     margin-bottom: 20px;
 }
 
+.chiikawa {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.gift-animate {
+    animation: bounce 1s infinite;
+}
+
 .message {
-    color: #e91e63;
+    color: #ff4d4d;
     margin-bottom: 30px;
 }
 
@@ -38,15 +49,20 @@ body {
 }
 
 .yes-button {
-    background-color: #4caf50;
+    background-color: #ff4d4d;
     color: white;
 }
 
 .no-button {
-    background-color: #f44336;
+    background-color: #666;
     color: white;
 }
 
 .button:hover {
     transform: scale(1.1);
 }
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+} 

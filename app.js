@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
-    
+
     // Create main container
     const container = document.createElement('div');
     container.className = 'container';
@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add success GIF
-    const successGift = document.createElement('img');
-    successGift.src = 'https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif';
-    successGift.alt = 'Happy Bear';
-    successGift.className = 'gift';
-    successState.appendChild(successGift);
+    // Add initial GIF
+    const initialGift = document.createElement('img');
+    initialGift.src = 'https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif';
+    initialGift.alt = 'Happy Bear';
+    initialGift.className = 'gift';
+    initialState.appendChild(initialGift);
 
     // Add message
     const message = document.createElement('h1');
@@ -66,11 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
 function moveButton() {
     const button = document.querySelector('.no-button');
     const container = document.querySelector('.container');
-    
     const containerRect = container.getBoundingClientRect();
     const maxX = containerRect.width - button.offsetWidth;
     const maxY = containerRect.height - button.offsetHeight;
-    
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
     

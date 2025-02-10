@@ -11,13 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add first GIF - using a completely different GIF
-    const gift = document.createElement('img');
-    gift.src = 'https://tenor.com/b0MTE.gif';  // bear in shirt GIF
-    gift.alt = 'Milk and Mocha Bears';
-    gift.className = 'gift';
-    initialState.appendChild(gift);
-
+    // Add success GIF
+    const successGift = document.createElement('img');
+    successGift.src = 'https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif';
+    successGift.alt = 'Happy Bear';
+    successGift.className = 'gift';
+    successState.appendChild(successGift);
 
     // Add message
     const message = document.createElement('h1');

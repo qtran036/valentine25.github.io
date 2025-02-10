@@ -13,10 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add first GIF - using a completely different GIF
     const gift = document.createElement('img');
-    gift.src = 'https://tenor.com/b0MTE.gif';  // bear in shirt GIF
-    gift.alt = 'Milk and Mocha Bears';
+    <div class="gif-container">
+    <img src="https://media.tenor.com/tkthao219-bubududu-sticker.gif" alt="Cute bears hugging">
+    <img src="https://media1.giphy.com/media/LnKM6jbBenbVXp1qA9/giphy.gif" alt="Love GIF 2">
+</div> 
     gift.className = 'gift';
     initialState.appendChild(gift);
+
 
     // Add message
     const message = document.createElement('h1');

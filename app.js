@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Script started'); // Debug log
-    
     const root = document.getElementById('root');
-    console.log('Root element:', root); // Debug log
     
     // Create main container
     const container = document.createElement('div');
@@ -14,17 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add first GIF - using a different cute GIF with error handling
+    // Add first GIF - using a completely different GIF
     const gift = document.createElement('img');
-    gift.src = 'https://media.tenor.com/Fn3k1xkHgcIAAAAi/peach-goma-love.gif';  // Different GIF
-    gift.alt = 'Cute Bear Love';
+    gift.src = 'https://media.tenor.com/S8_V9lNMc3oAAAAi/milk-and-mocha-cute.gif';  // New cute bear GIF
+    gift.alt = 'Milk and Mocha Bears';
     gift.className = 'gift';
-    gift.onload = () => console.log('First GIF loaded successfully'); // Debug log
-    gift.onerror = (e) => {
-        console.log('First GIF failed to load:', e); // Debug log
-        // Try fallback GIF
-        gift.src = 'https://media.tenor.com/bKAY9zJqlYwAAAAi/chiikawa-heart.gif';
-    };
     initialState.appendChild(gift);
 
     // Add message
@@ -63,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     successGift.src = 'https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif';
     successGift.alt = 'Happy Bear';
     successGift.className = 'gift';
-    successGift.onload = () => console.log('Success GIF loaded successfully'); // Debug log
     successState.appendChild(successGift);
 
     // Add success message
@@ -71,8 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     successMessage.className = 'message';
     successMessage.textContent = 'You are stuck with me! Happy Valentine\'s Day! ❤️';
     successState.appendChild(successMessage);
-
-    console.log('All elements created'); // Debug log
 });
 
 function moveButton() {
@@ -92,7 +80,6 @@ function moveButton() {
 }
 
 function handleYes() {
-    console.log('Yes button clicked'); // Debug log
     document.getElementById('initial-state').style.display = 'none';
     document.getElementById('success-state').style.display = 'block';
 }

@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add first GIF - different from second GIF
+    // Add first GIF - using a different cute GIF
     const gift = document.createElement('img');
-    gift.src = 'https://media.tenor.com/N2oqtqaB_G4AAAAi/peach-goma.gif';  // Different cute bear GIF
+    gift.src = 'https://media.tenor.com/0dZFJ1q3ELcAAAAi/peach-goma-love.gif';  // New different GIF
     gift.alt = 'Cute Bear Love';
     gift.className = 'gift';
     initialState.appendChild(gift);

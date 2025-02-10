@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add first GIF - using a completely different GIF
     const gift = document.createElement('img');
-    gift.src = 'https://media.tenor.com/S8_V9lNMc3oAAAAi/milk-and-mocha-cute.gif';  // New cute bear GIF
+    gift.src = 'https://tenor.com/b0MTE.gif';  // bear in shirt GIF
     gift.alt = 'Milk and Mocha Bears';
     gift.className = 'gift';
     initialState.appendChild(gift);

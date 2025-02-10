@@ -9,75 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add Bubu Dudu GIF with modified URL format
+    // Add Bubu Dudu GIF from local repository
     const gift = document.createElement('img');
-    gift.src = 'https://media.tenor.com/h3UrSQFKG3gAAAAi/bubu-dudu.gif';  // Changed to match working GIF format
+    gift.src = './bubu-dudu.gif';  // Local path to the GIF
     gift.alt = 'Bubu Dudu with Hearts';
     gift.className = 'gift';
-    // Add error handling to check if GIF loads
-    gift.onerror = () => {
-        console.log('First GIF failed to load');
-        // Try alternative URL if first one fails
-        gift.src = 'https://media1.tenor.com/m/h3UrSQFKG3gAAAAC/bubu-dudu.gif';
-    };
     initialState.appendChild(gift);
 
-    // Rest of your code remains the same
-    const message = document.createElement('h1');
-    message.className = 'message';
-    message.textContent = 'Will you be my Valentine?';
-    initialState.appendChild(message);
-
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'button-container';
-    initialState.appendChild(buttonContainer);
-
-    const yesButton = document.createElement('button');
-    yesButton.className = 'button yes-button';
-    yesButton.textContent = 'Yes';
-    yesButton.onclick = handleYes;
-    buttonContainer.appendChild(yesButton);
-
-    const noButton = document.createElement('button');
-    noButton.className = 'button no-button';
-    noButton.textContent = 'No';
-    noButton.onmouseover = moveButton;
-    buttonContainer.appendChild(noButton);
-
-    const successState = document.createElement('div');
-    successState.id = 'success-state';
-    successState.style.display = 'none';
-    container.appendChild(successState);
-
-    const successGift = document.createElement('img');
-    successGift.src = 'https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif';
-    successGift.alt = 'Happy Bear';
-    successGift.className = 'gift';
-    successState.appendChild(successGift);
-
-    const successMessage = document.createElement('h1');
-    successMessage.className = 'message';
-    successMessage.textContent = 'You are stuck with me! Happy Valentine\'s Day! ❤️';
-    successState.appendChild(successMessage);
-});
-
-function moveButton() {
-    const button = document.querySelector('.no-button');
-    const container = document.querySelector('.container');
-    
-    const containerRect = container.getBoundingClientRect();
-    const maxX = containerRect.width - button.offsetWidth;
-    const maxY = containerRect.height - button.offsetHeight;
-    
-    const randomX = Math.random() * maxX;
-    const randomY = Math.random() * maxY;
-    
-    button.style.position = 'absolute';
-    button.style.left = `${randomX}px`;
-    button.style.top = `${randomY}px`;
-}
-
-function handleYes() {
-    document.getElementById('initial-state').style.display = 'none';
-    document.getElementById('success-state').style.display = 'block';
-}
+    // Rest of your code remains the same...

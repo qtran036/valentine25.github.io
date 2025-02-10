@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add Bubu Dudu heart GIF
+    // Add Bubu Dudu GIF with the correct media URL
     const gift = document.createElement('img');
-    gift.src = 'https://media.tenor.com/b0CqcAAAAACi/bubu-dudu.gif';  // New Bubu Dudu GIF
+    gift.src = 'https://media1.tenor.com/m/h3UrSQFKG3gAAAAC/bubu-dudu.gif';  // New working URL
     gift.alt = 'Bubu Dudu with Hearts';
     gift.className = 'gift';
     initialState.appendChild(gift);

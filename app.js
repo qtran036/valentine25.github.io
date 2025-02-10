@@ -9,11 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
     initialState.id = 'initial-state';
     container.appendChild(initialState);
 
-    // Add Bubu Dudu GIF with the correct media URL
+    // Add Bubu Dudu GIF with modified URL format
     const gift = document.createElement('img');
-    gift.src = 'https://media1.tenor.com/m/h3UrSQFKG3gAAAAC/bubu-dudu.gif';  // New working URL
+    gift.src = 'https://media.tenor.com/h3UrSQFKG3gAAAAi/bubu-dudu.gif';  // Changed to match working GIF format
     gift.alt = 'Bubu Dudu with Hearts';
     gift.className = 'gift';
+    // Add error handling to check if GIF loads
+    gift.onerror = () => {
+        console.log('First GIF failed to load');
+        // Try alternative URL if first one fails
+        gift.src = 'https://media1.tenor.com/m/h3UrSQFKG3gAAAAC/bubu-dudu.gif';
+    };
     initialState.appendChild(gift);
 
     // Rest of your code remains the same
